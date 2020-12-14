@@ -129,6 +129,7 @@ func rEngine(thread bool, urls []string, savePath string, progressBar *widget.Pr
 func main() {
 	myApp := app.New()
 	myApp.Settings().SetTheme(&theme.MyTheme{})
+	myApp.SetIcon(theme.MyLogo())
 	myWin := myApp.NewWindow("Radiko")
 	myWin.Resize(fyne.NewSize(320, 250))
 	myWin.SetFixedSize(true)

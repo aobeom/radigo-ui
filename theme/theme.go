@@ -34,3 +34,7 @@ func (MyTheme) Padding() int                      { return theme.LightTheme().Pa
 func (MyTheme) IconInlineSize() int               { return theme.LightTheme().IconInlineSize() }
 func (MyTheme) ScrollBarSize() int                { return theme.LightTheme().ScrollBarSize() }
 func (MyTheme) ScrollBarSmallSize() int           { return theme.LightTheme().ScrollBarSmallSize() }
+
+func MyLogo() fyne.Resource {
+	return resourceRadigoUiPng
+}
