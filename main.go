@@ -171,7 +171,7 @@ func main() {
 				radioData.RType = "b"
 
 				dlInfo.SetText("Checking Your IP...")
-				result, ok := radio.IPCheck()
+				info, ok := radio.IPCheck()
 				if ok {
 					saveName := fmt.Sprintf("%s.%s.%s.aac", radioData.StationID, radioData.StartAt, radioData.EndAt)
 					workDir := utils.FileSuite.LocalPath(radio.Debug)
@@ -193,7 +193,7 @@ func main() {
 					rEngine(true, aacURLs, savePath, progressBar)
 					dlInfo.SetText("Finished")
 				} else {
-					dlInfo.SetText("IP Forbidden: " + result)
+					dlInfo.SetText("IP Forbidden: " + info)
 				}
 			}
 		} else {

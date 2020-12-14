@@ -146,6 +146,12 @@ func GetJSKey() (authkey string) {
 
 // IPCheck 检查 IP 是否符合
 func IPCheck() (info string, result bool) {
+	defer func() {
+		if rec := recover(); rec != nil {
+			info = "Proxy Error"
+			result = false
+		}
+	}()
 	checkURL := "http://radiko.jp/area"
 
 	headers := utils.MiniHeaders{
