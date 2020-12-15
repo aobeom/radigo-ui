@@ -9,7 +9,7 @@ import (
 
 type MyTheme struct{}
 
-func (MyTheme) TextFont() fyne.Resource { return resourceMPLUSRounded1cRegularTtf }
+func (MyTheme) TextFont() fyne.Resource     { return resourceMPLUSRounded1cRegularTtf }
 func (MyTheme) TextBoldFont() fyne.Resource { return resourceMPLUSRounded1cBoldTtf }
 
 func (MyTheme) BackgroundColor() color.Color      { return theme.LightTheme().BackgroundColor() }
@@ -35,6 +35,4 @@ func (MyTheme) IconInlineSize() int               { return theme.LightTheme().Ic
 func (MyTheme) ScrollBarSize() int                { return theme.LightTheme().ScrollBarSize() }
 func (MyTheme) ScrollBarSmallSize() int           { return theme.LightTheme().ScrollBarSmallSize() }
 
-func MyLogo() fyne.Resource {
-	return resourceRadigoUiPng
-}
+func MyLogo() fyne.Resource { return resourceRadigoUiPng }
